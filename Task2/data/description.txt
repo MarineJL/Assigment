@@ -1,0 +1,294 @@
+month
+Month of the accident
+
+day
+Day of the accident
+
+time
+Hours and minutes of the accident
+
+light
+Light: lighting conditions in which the accident occurred
+1 - Full day
+2 - Twilight or dawn
+3 - Night without public lighting
+4 - Night with public lighting not switched on
+5 - Night with public lighting on
+
+location
+Location :
+1 - Outside urban areas
+2 - In urban areas
+
+intersection
+Intersection :
+1 - Off-intersection
+2 - Intersection in X
+3 - T-intersection
+4 - Y-intersection
+5 - Intersection with more than 4 branches
+6 - Gyratory
+7 - Place
+8 - Level crossing
+9 - Other intersection
+
+atmosphere
+Weather conditions :
+1 - Normal
+2 - Light rain
+3 - Heavy rain
+4 - Snow - hail
+5 - Fog - smoke
+6 - Strong wind - storm
+7 - Dazzling weather
+8 - Overcast weather
+9 - Other
+
+collision
+Type of collision:
+1 - Two vehicles - front
+2 - Two vehicles - from the rear
+3 - Two vehicles - from the side
+4 - Three or more vehicles - in a chain
+5 - Three or more vehicles - multiple collisions
+6 - Other collision
+7 - Collision-free
+
+municipality
+Municipality: The municipality number is a code given by INSEE. The code has 3 digits on the right.
+
+department
+Department: INSEE code (Institut National de la Statistique et des Etudes Economiques) of the monitoring department.
+
+road
+Road category :
+1 - Highway
+2 - National Road
+3 - Departmental Road
+4 - Communal road
+5 - Off public network
+6 - Parking lot open to public traffic
+9 - other
+
+traffic
+Traffic regime :
+1 - One-way
+2 - Bidirectional
+3 - With separate pavements
+4 - With variable assignment channels
+
+nblanes
+Total number of lanes of traffic
+
+reslane
+Indicates the existence of a reserved lane, regardless of whether or not the accident occurs on that lane.
+1 - Bicycle path
+2 - Cycling bank
+3 - Reserved lane
+
+laneprofile
+Long profile describes the gradient of the road at the accident site
+1 - Dish
+2 - Slope
+3 - Coastal summit
+4 - Bottom of the coast
+
+plan
+Drawing in plan:
+1 - Straight part
+2 - On the left curve
+3 - In a right-hand curve
+4 - In " S ".
+
+surface
+Surface condition
+1 - normal
+2 - wet
+3 - puddles
+4 - flooded
+5 - snow covered
+6 - mud
+7 - icy
+8 - fat - oil
+9 - other
+
+user
+User category :
+1 - Driver
+2 - Passenger
+3 - Pedestrian
+4 - Pedestrian by rollerblade or scooter
+
+sex
+Gender of the user
+1 - Male
+2 - Female
+
+route
+Reason for travel at the time of the accident:
+1 - Residence - work
+2 - Home - school
+3 - Shopping - Purchasing
+4 - Professional use
+5 - Walking - leisure
+9 - Other
+
+pedlocation
+Pedestrian location:
+On the road:
+1 - More than 50 m from the pedestrian crossing
+2 - Less than 50 m from the pedestrian crossing
+On pedestrian crossings:
+3 - Without light signalling
+4 - With light signalling
+Miscellaneous:
+5 - On sidewalk
+6 - On the shoulder
+7 - On refuge or BAU
+8 - On the other side of the aisle
+
+pedaction
+Pedestrian action:
+Moving around
+0 - not filled in or not applicable
+1 - Direction of vehicle colliding
+2 - Reverse direction of the vehicle
+Miscellaneous
+3 - Crossing through
+4 - Hidden
+5 - Player - current
+6 - With animal
+9 - Other
+
+pedcondition
+This variable is used to specify whether the injured pedestrian was alone or not
+1 - Alone
+2 - Accompanied
+3 - In groups
+
+birth
+User's year of birth
+
+dirtraffic
+Direction of traffic:
+1 - Increasing postal address number
+2 - Decreasing postal address number
+
+catvehicle
+Vehicle category :
+01 - Bicycle
+02 - Moped <50cm3
+03 - Cart (Quadricycle with bodywork) (formerly "cart or motor tricycle")
+04 - Reference no longer used since 2006 (scooter registered)
+05 - Reference no longer used since 2006 (motorcycle)
+06 - Reference no longer used since 2006 (side-car)
+07 - LV only
+08 - Most used category (LV + caravan)
+09 - Most used category (LV + trailer)
+10 - VU only 1.5T <= PTAC <= 3.5T with or without trailer (formerly VU only 1.5T <= PTAC <=
+3,5T)
+11 - Reference no longer used since 2006 (VU (10) + caravan)
+12 - Reference no longer used since 2006 (VU (10) + trailer)
+13 - PL only 3.5T <PTCA <= 7.5T
+14 - PL only > 7.5T
+15 - PL > 3,5T + trailer
+16 - Road tractor alone
+17 - Road tractor + semi-trailer
+18 - Reference no longer used since 2006 (public transport)
+19 - Reference no longer used since 2006 (tramway)
+20 - Special equipment
+21 - Agricultural tractor
+30 - Scooter < 50 cm3
+31 - Motorcycle > 50 cm 3 and <= 125 cm 3
+32 - Scooters > 50 cm 3 and <= 125 cm 3
+33 - Motorcycle > 125 cm 3
+34 - Scooters > 125 cm 3
+35 - Lightweight quad <= 50 cm 3 (Quadricycle with no bodywork)
+36 - Heavy quad > 50 cm 3 (Quadricycle with no bodywork)
+37 - Buses
+38 - Coach
+39 - Train
+40 - Tramway
+99 - Other vehicle
+
+nboccupants
+Number of occupants in public transit
+
+obstacle
+Fixed obstacle hit:
+1 - Parking vehicle
+2 - Shaft
+3 - Metal slide
+4 - Concrete slide
+5 - Other slide
+6 - Building, wall, bridge pier
+7 - Vertical signalling support or emergency call station
+8 - Post
+9 - Street furniture
+10 - Parapet
+11 - Islet, refuge, upper boundary
+12 - Kerbside curb
+13 - Ditch, slope, rock face
+14 - Other fixed obstacle on the road
+15 - Other fixed obstacle on sidewalk or shoulder
+16 - Obstacle-free road exit
+
+movobstacle
+Mobile obstacle hit:
+1 - Pedestrian
+2 - Vehicle
+4 - Rail vehicle
+5 - Domestic animals
+6 - Wild animal
+9 - Other
+
+impact
+Initial shock point:
+1 - Before
+2 - Front right
+3 - Front left
+4 - Rear
+5 - Rear right
+6 - Rear left
+7 - Right side
+8 - Left side
+9 - Multiple shocks (barrels)
+
+maneuver
+Main manoeuvre before the accident:
+1 - Without change of direction
+2 - Same direction, same row
+3 - Between 2 rows
+4 - In reverse
+5 - In the wrong direction
+6 - By crossing the central reservation
+7 - In the bus lane, in the same direction
+8 - In the bus lane, in the opposite direction
+9 - By inserting
+10 - By turning around on the roadway
+Changing lanes
+11 - On the left
+12 - On the right
+Deported
+13 - On the left
+14 - On the right
+Turning point
+15 - On the left
+16 - On the right
+Exceeding
+17 - On the left
+18 - On the right
+Miscellaneous
+19 - Crossing the roadway
+20 - Parking manoeuvre
+21 - Avoidance manoeuvre
+22 - Door opening
+23 - Stopped (excluding parking)
+24 - Parked (with occupants)
+
+severity
+Severity of the accident: Accident users are classified into three categories of victims plus those who are unharmed
+1 - Unscathed
+2 - Slight injury
+3 - Injured in hospital
+4 - Killed
