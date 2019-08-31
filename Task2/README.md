@@ -1,36 +1,47 @@
-# Data_Science_Challenge_Kaggle_EDHEC
-Data Science Kaggle Challenge on Personal Injury Accidents
+# B. Synthetic Data
 
-# Context
+![badge](https://img.shields.io/badge/language-python-blue.svg)
+
+>Either create from scratch, crawl or download a dataset of your choice and apply a machine learning method to extract information from the dataset. Examples could be a regression, classification or clustering analysis. 
+
+Here I have decided to work on a classification project on Personal Injury Car Accidents. The *CarAccidentsPredictions.ipynb* notebook contains the data cleaning, exploratory analysis, ML models and results.
+
+# :books: Table of content
+
+- [Context](#car-Context)
+- [Dataset](#fuelpump-Dataset)
+- [Goal](#white_check_mark-Goal)
+- [Evaluation](#chart_with_upwards_trend-Evaluation)
+- [Target](#dart-Target)
+- [Data Fields](#round_pushpin-Explanatory-Variables)
+- [Results](#rocket-Results)
+- [Synthetic Data](#robot-Synthetic-Data)
+
+# :car: Context
 For each personal injury accident (i.e. an accident occurring on a road open to public traffic, involving at least one vehicle and resulting in at least one victim requiring treatment), information describing the accident is entered by the police unit that intervened at the accident site. These entries are collected in the national road traffic injury file.
 
 The present database lists all traffic accidents that occurred during a given year in metropolitan France and the overseas departments (Guadeloupe, French Guiana, Martinique, Reunion Island and Mayotte) with a simplified description. This includes information on the location of the accident, such as information on the characteristics of the accident and its location, the vehicles involved and their victims.
 
-# Dataset
+# :fuelpump: Dataset
 The dataset contains thousands of individuals and 32 variables (which are either quantitative or categorical) with many missing values. The description of these variables is available in the file description.txt.
 
-The target variable is the severity of each personal injury accident. It is a label taking 4 values:
-
-1. Unscathed
-2. Slight injury
-3. Injured in hospital
-4. Killed
-
-# Goal
-The goal of this challenge is to predict the severity of a personal injury accident based on 31 descriptive variables.
-
-# Evaluation
-
-The evaluation metric si the categorization accuracy (i.e. the usual classification score).
-
-# Data-description
 ## File descriptions
 - Xtrain.csv: matrix of input data for training (each individual is a row);
 - ytrain.csv: vector of input targets for training (it has as many rows as Xtrain.csv);
 - Xtest.csv: matrix of input data for prediction (each individual is a row);
 - description.txt: description of variables.
 
-# Target
+# :white_check_mark: Goal
+The objective is to predict the severity of a personal injury accident based on 31 descriptive variables. This probelm is traited as a classification problem.
+NB: Here a regression approach could also have been considered.
+
+
+# :chart_with_upwards_trend: Evaluation
+
+The evaluation metric is the categorization accuracy (i.e. the usual classification score).
+
+
+# :dart: Target
 The target is the severity of each personal injury accident. It can take four different values:
 
 1. Unscathed
@@ -38,7 +49,7 @@ The target is the severity of each personal injury accident. It can take four di
 3. Injured in hospital
 4. Killed
 
-# Data fields
+# :round_pushpin: Explanatory Variables
 See the file description.txt for a detailed description.
 
 - month: Month of the accident
@@ -73,28 +84,23 @@ See the file description.txt for a detailed description.
 - impact: Initial shock point
 - maneuver: Main manoeuvre before the accident
 
-# Rules
-The examination linked to this challenge will be based on four components:
 
-1. the Kaggle leaderboard (the best, the better mark);
-2. a concise Python notebook enabling to rebuild your best model;
-3. a slideshow (about 15 slides), presenting your approach (method, evaluation procedure, achievements, pitfalls);
-4. a 15-minute defense supported by your slideshow (minor Data sciences only).
+# :rocket: Results
+For each model tested, a summary table displays the results given by the algorithms. The metric used is the accuracy (ie. the number of correctly classified values). Other metrics could have been used (Specificity, Sensitivity, Recall, AUC/ROC curves). Here it seems that XGBoost performed best. (see mean_test_score in the tables)
 
-# Kaggle rules
-Leaderboard
-The purpose of the Kaggle leaderboard is to:
 
-- assess the ranking of each team (this is the public leaderboard);
-- produce the final ranking used for the exam (this is the private leaderboard).
-In order to use the Kaggle leaderboard, you have to upload a prediction file. This latter should have an 'id' column and a 'prediction' one, similarly to the example provided below (see Overview > Evaluation).
+# :robot: Synthetic Data
 
-This is a challenge: your main goal is to stand at the top of the ranking. Thus, you are expected to submit several times.
+> Now derive a synthetic dataset, that shares as much information as possible with the original one regarding the machine learning process you applied; but is otherwise fundamentally different. How would you assess the quality of your data synthesis process?
 
-# Team work
-You have to work and join the challenge in teams of 3 participants enrolled.
+Why synthetic data in this case?
+- Test the ML process robustness to noise.
+- Simulate not yet encountered conditions.
+- Protect the privacy and confidentiality of authentic data. 
+- Over sampling the minor class in case of imbalanced dataset.
 
-# Competition timeline
-Start Date: April 17
-
-End Date: May 21
+Assumptions & Methods: 
+- The out-of-sample data must reflect the distributions satisfied by the sample data.
+- Replicate all important statistical properties: The assumption is that the true mean and standard deviation of each feature/category pair is known. In reality, if the synthetic data was too far off from these values, it could severely impact the accuracy of the trained model.
+- Thus, I would use SMOTE (Synthetic Minority Over-sampling) technique to generate new synthetic samples and deal with my imbalanced classes in the training dataset.
+- SMOTE is based on a KNN approach to select similar records and alter that record one column at a time.
