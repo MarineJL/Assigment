@@ -15,7 +15,7 @@
 ### The biological model
 Artificial Neuronal Networks are mathematical models inspired by the biology itself. The perceptron (the artifical neurone) replicates the biological neurone functioning.
 
-<p align='center'><img src="imgs/q11.png" width='300px'></p>
+<p align='center'><img src="imgs/q11.png" width='400px'></p>
 
 Here are the following entities:
 - input xi ( = the dendrites)
@@ -64,7 +64,7 @@ MLP learn iteratively, with back-propagation (which  requires the derivatives of
 <p align='center'><img src="imgs/q14.PNG" width='400px'></p>
 
 
-<p align='center'><img src="imgs/q15.PNG" width='300px'></p>
+<p align='center'><img src="imgs/q15.PNG" width='200px'></p>
 
 ***
 
@@ -185,6 +185,7 @@ The following picture shows the different steps of a DevOps workflow.
 
 Plan, code, build and test are the Dev part of the workflow.
 Release (code pushed in a registry), deploy, operate and monitor are on the Ops side.
+Those steps are detailed in part C of this assigment (see Task3).
  
 In term of tools, the DevOps framework is based on different tools at each step:
 -   Management tools like Trello, LucidChart
